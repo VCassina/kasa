@@ -1,8 +1,7 @@
 /* CODE REACT DE LA GENERATION DE PAGE "ANNONCE" ! */
-
 import React from "react";
 
-const AnnoncePage = () => {
+function AnnoncePage() {
   return (
     <div>
         Je suis une page d'annonce.

@@ -5,7 +5,7 @@ import AboutPage from "../AboutPage";
 import AnnoncePage from "../AnnoncePage";
 import NotFoundPage from "../NotFoundPage";
 
-const AppRoutes = () => {
+function AppRoutes() {
   return (
     <Routes>
       <Route path="/" element={<HomePage />} />

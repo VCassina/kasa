@@ -1,7 +1,7 @@
 /* CODE REACT DE LA GENERATION DE PAGE "A PROPOS" ! */
 import React from "react";
 
-const AboutPage = () => {
+function AboutPage() {
   return (
     <div>
         Je suis une page d'à propos.
