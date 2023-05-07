@@ -5,7 +5,7 @@ import Header from "../components/Header";
 
 function HomePage() {
   return (
-    <div>
+    <div class="homepage_div">
         <Header />
       <h1>Bienvenue sur notre site</h1>
       {/* Content. */}

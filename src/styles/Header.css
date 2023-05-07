@@ -6,7 +6,6 @@ header {
     height: 70px;
     font-weight: 500;
     font-size: 24px;
-    margin-bottom: 60px;
 }
 
 header a {
@@ -31,6 +30,10 @@ header ul {
     font-family: 'Montserrat', sans-serif;
 }
 
-.header_homepage-link {
+.header_homepage-link.active {
     text-decoration: underline;
-}
+  }
+  
+  .header_about-link.active {
+    text-decoration: underline;
+  }
