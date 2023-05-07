@@ -36,3 +36,10 @@
     transform: rotate(360deg);
   }
 }
+
+.app_div {
+  margin: 40px auto;
+  max-width: 1240px;
+
+  /* margin: 40px 100px; */
+}

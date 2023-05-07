@@ -1,20 +1,12 @@
 /* CODE REACT DE LA GENERATION DE PAGE "ACCUEIL" ! */
 import React from "react";
 import { Link } from "react-router-dom";
+import Header from "../components/Header";
 
 function HomePage() {
   return (
     <div>
-      <nav>
-        <ul>
-          <li>
-            <Link to="/">Accueil (cette page)</Link>
-          </li>
-          <li>
-            <Link to="/about">À propos</Link>
-          </li>
-        </ul>
-      </nav>
+        <Header />
       <h1>Bienvenue sur notre site</h1>
       {/* Content. */}
       <div
