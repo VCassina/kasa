@@ -1,14 +1,22 @@
+import React from "react";
+import PropTypes from "prop-types";
 import "../styles/Banner.css";
 import "../styles/fonts.css";
-import bannercover from "../images/bannerhomepage.png"
 
-function Banner() {
-  return <article className="banner_wrapper">
-    <img src={bannercover} alt="Côté boisée" className="banner_img"/>
-    <div className="banner_text">
-        <h2>Chez vous, partout et ailleurs</h2>
+function Banner({ image, title }) {
+  return (
+    <article className="banner_wrapper">
+      <img src={image} alt="Côté boisée" className="banner_img" />
+      <div className="banner_text">
+        <h2>{title}</h2>
       </div>
-  </article>;
+    </article>
+  );
 }
+
+Banner.propTypes = {
+  image: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+};
 
 export default Banner;

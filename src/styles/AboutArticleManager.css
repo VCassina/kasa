@@ -1,0 +1,7 @@
+.AboutArticle_AboutArticle_wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 200px;
+}
