@@ -43,8 +43,6 @@
 }
 
 header,
-.homepage_title,
-.homepage_content,
 .banner_wrapper,
 .annonce_wrapper {
   max-width: 1240px;       /* Mix entre demande figma et bonne pratique <- Ce que je pense être la bonne chose à faire. */
@@ -55,3 +53,8 @@ header,
   /* max-width: 1620px;
   margin: 40px auto;          // Ce que j'estime être bon. */
 }
+
+/*
+Pour décaler quand la scrollbar n'est pas présente !
+margin-right: calc(100vw - 100%);
+*/

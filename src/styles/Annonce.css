@@ -29,6 +29,7 @@ a {
     object-fit: cover;
     border-radius: 10px;
     filter: brightness(75%);
+    max-width: 400px;
 }
 
 .annonce_element h2 {

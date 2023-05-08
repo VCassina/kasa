@@ -6,6 +6,7 @@ import annonces from "../datas/logements.json";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlus } from "@fortawesome/free-solid-svg-icons";
 
+
 function Annonce() {
   return (
     <section className="annonce_wrapper">
