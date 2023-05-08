@@ -32,14 +32,26 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
 }
 
 .app_div {
-  margin: 40px auto;
-  max-width: 1240px;
+  overflow-x: hidden;
+}
 
-  /* margin: 40px 100px; */
+header,
+.homepage_title,
+.homepage_content,
+.banner_wrapper,
+.annonce_wrapper {
+  max-width: 1240px;       /* Mix entre demande figma et bonne pratique <- Ce que je pense être la bonne chose à faire. */
+  margin: 40px auto; 
+
+  /*margin: 40px 100px;       // FIGMA perfect mais pratique étrange <- Entre les deux. */
+
+  /* max-width: 1620px;
+  margin: 40px auto;          // Ce que j'estime être bon. */
 }

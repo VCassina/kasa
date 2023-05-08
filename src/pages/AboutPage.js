@@ -4,7 +4,7 @@ import Header from "../components/Header";
 
 function AboutPage() {
   return (
-    <div class="aboutpage_div">
+    <div className="aboutpage_div">
         <Header />
         Je suis la page "A propos".
     </div>

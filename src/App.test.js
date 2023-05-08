@@ -1,8 +1,10 @@
-import { render, screen } from '@testing-library/react';
+import { createRoot } from 'react-dom';
+import { screen } from '@testing-library/react';
 import App from './App';
 
 test('renders learn react link', () => {
-  render(<App />);
+  const root = document.createElement('div');
+  createRoot(root).render(<App />);
   const linkElement = screen.getByText(/learn react/i);
   expect(linkElement).toBeInTheDocument();
 });
