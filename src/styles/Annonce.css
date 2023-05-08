@@ -1,3 +1,7 @@
+a {
+    text-decoration: none;
+}
+
 .annonce_wrapper {
     display: flex;
     width: 100%;
@@ -46,13 +50,17 @@
     border-radius: 25px;
 }
 
-.annonce_element-more a {
+.annonce_element-more {
     display: flex;
     gap: 10px;
     color: black;
-    text-decoration: none;
 }
 
-.annonce_element-more a:hover {
+.annonce_element:hover {
+    opacity: 0.75;
+}
+
+.annonce_element:hover span,
+.annonce_element:hover svg {
     opacity: 0.5;
 }
