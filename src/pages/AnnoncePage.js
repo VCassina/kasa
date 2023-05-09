@@ -26,23 +26,25 @@ function AnnoncePage() {
   return (
     <div className="annoncePage_wrapper">
       <Header />
-      <Carrousel pictures={annonce.pictures}/>
-      {annonce && (
-        <AnnonceUpperArticle
-          title={annonce.title}
-          location={annonce.location}
-          tags={annonce.tags}
-          host={annonce.host}
-          rating={annonce.rating}
-        />
+      {annonce && ( // On a besoin de connaitre l'état d'annonce pour continuer OU NON la compilation du code.
+        <div>
+          <Carrousel pictures={annonce.pictures} />
+          <AnnonceUpperArticle
+            title={annonce.title}
+            location={annonce.location}
+            tags={annonce.tags}
+            host={annonce.host}
+            rating={annonce.rating}
+          />
+          <div className="annoncePage_collapseManager">
+            <CollapseArticle title="Description" content={annonce.description} />
+            <CollapseArticle title="Équipements" content={annonce.equipments} />
+          </div>
+        </div>
       )}
-      <div className="annoncePage_collapseManager">
-        <CollapseArticle title="Description" content={annonce.description} />
-        <CollapseArticle title="Équipements" content={annonce.equipments} />
-      </div>
       <Footer />
     </div>
-  );
+  ); 
 }
 
 export default AnnoncePage;
