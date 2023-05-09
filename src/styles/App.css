@@ -45,7 +45,8 @@
 header,
 .banner_wrapper,
 .annonce_wrapper,
-.AboutArticle_wrapper {
+.AboutArticle_wrapper,
+.notfound_wrapper {
   max-width: 1240px;       /* Mix entre demande figma et bonne pratique <- Ce que je pense être la bonne chose à faire. */
   margin: 40px auto; 
 

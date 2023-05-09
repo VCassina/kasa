@@ -1,5 +1,4 @@
 import React from "react";
-import PropTypes from "prop-types";
 import "../styles/Banner.css";
 import "../styles/fonts.css";
 
@@ -13,10 +12,5 @@ function Banner({ image, title }) {
     </article>
   );
 }
-
-Banner.propTypes = {
-  image: PropTypes.string.isRequired,
-  title: PropTypes.string.isRequired,
-};
 
 export default Banner;

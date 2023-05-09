@@ -1,0 +1,30 @@
+.notfound_wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 180px;
+    margin-bottom: 180px;
+    gap: 180px;
+    color: #FF6060;
+}
+
+.notfound_wrapper-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 65px;
+}
+
+.notfound_wrapper-content h2 {
+    width: 900px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 36px;
+}
+
+a {
+    color: inherit;
+    text-decoration: underline;
+}

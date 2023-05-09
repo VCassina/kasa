@@ -16,6 +16,4 @@ function AppRoutes() {
   );
 };
 
-/* L'annonce redirigera plus tard sur un ID de la page de données correspondant à l'élément cliqué !! */
-
 export default AppRoutes;
