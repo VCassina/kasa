@@ -1,0 +1,58 @@
+.carrousel_wrapper {
+    position: relative;
+    width: 100%;
+    height: 415px;
+    overflow: hidden;
+    border-radius: 25px;
+}
+
+.carrousel-content {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.carrousel-content img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.carrousel-content .fa-chevron-left,
+.carrousel-content .fa-chevron-right {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 24px;
+    color: white;
+    height: 80px;
+}
+
+.carrousel-content .fa-chevron-left:hover,
+.carrousel-content .fa-chevron-right:hover {
+    cursor: pointer;
+}
+
+.carrousel-content .fa-chevron-left {
+    left: 10px;
+}
+
+.carrousel-content .fa-chevron-right {
+    right: 10px;
+}
+
+.carrousel_wrapper p {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0;
+    color: white;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+}

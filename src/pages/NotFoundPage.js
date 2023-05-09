@@ -6,7 +6,7 @@ import NotFound from "../components/NotFound";
 
 function NotFoundPage() {
   return (
-    <div>
+    <div className="notFoundPage_wrapper">
       <Header />
       <NotFound />
       <Footer />
