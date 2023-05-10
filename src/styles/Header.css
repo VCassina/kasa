@@ -50,15 +50,29 @@ header ul {
 
 @media (max-width: 599px) {
 
+    header {
+        font-weight: 300;
+        font-size: 12px;
+        margin-bottom: 0;
+        margin-top: 20px;
+        text-transform: uppercase;
+        height: 50px;
+    }
+
+    .header_logo {
+        width: 150px;
+    }
+
     .header_nav {
         justify-self: flex-end;
+        width: 140px;
     }
 
     .header_ul {
-        flex-direction: column;
         justify-content: end;
+        align-items: center;
         position: relative;
-        top: 18px;
         gap: 10px;
+        font-weight: 600;
     }
 }

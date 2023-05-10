@@ -77,3 +77,18 @@ header,
     padding-right: 40px;
   }
 }
+
+@media (max-width: 599px) {
+
+  header,
+  .banner_wrapper,
+  .AboutArticle_wrapper,
+  .notfound_wrapper,
+  .annoncePage_collapseManager,
+  .annonceUpperArticle_wrapper,
+  .carrousel_wrapper {
+    margin: 0px auto;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}

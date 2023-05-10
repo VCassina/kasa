@@ -27,7 +27,7 @@ function AnnoncePage() {
     <div className="annoncePage_wrapper">
       <Header />
       {annonce && ( // On a besoin de connaitre l'état d'annonce pour continuer OU NON la compilation du code.
-        <div>
+        <main>
           <Carrousel pictures={annonce.pictures} />
           <AnnonceUpperArticle
             title={annonce.title}
@@ -40,7 +40,7 @@ function AnnoncePage() {
             <CollapseArticle title="Description" content={annonce.description} />
             <CollapseArticle title="Équipements" content={annonce.equipments} />
           </div>
-        </div>
+        </main>
       )}
       <Footer />
     </div>

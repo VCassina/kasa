@@ -56,3 +56,33 @@
     font-weight: 500;
     font-size: 20px;
 }
+
+@media (max-width: 1279px) {
+    .carrousel_wrapper {
+        position: relative;
+        width: auto;
+        height: 415px;
+        margin: 0px auto;
+    }
+    .carrousel-content img {
+        border-radius: 10px;
+    }
+}
+
+@media (max-width: 599px) {
+    .carrousel_wrapper {
+        position: relative;
+        width: auto;
+        height: 255px;
+        margin: 20px auto;
+    }
+
+    .carrousel-content .fa-chevron-left,
+    .carrousel-content .fa-chevron-right {
+        height: 20px;
+    }
+
+    .carrousel_wrapper p {
+        display: none;
+    }
+}

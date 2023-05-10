@@ -30,7 +30,8 @@
   @media (max-width: 599px) {
 
     .banner_wrapper {
-      margin: 40px 0 0 0;
+      margin: 20px 0;
+      justify-content: left;
     }
 
     .banner_img {
@@ -40,6 +41,15 @@
     .banner_text {
       font-size: 20px;
       line-height: 40px;
+      text-align: left;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 16px;
+      width: 60%;
+
+      top: 0%;
+      left: 40px;
+      transform: none;
     }
 
     .resize_img--specialBehave {

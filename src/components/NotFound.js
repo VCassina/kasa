@@ -10,7 +10,7 @@ function NotFound() {
         <img src={fourHundredFour} alt="404" />
         <h2>Oups! La page que vous demandez n'existe pas.</h2>
       </article>
-      <Link to="/">Retourner à la page d'Accueil</Link>
+      <Link to="/">Retourner sur la page d'accueil</Link>
     </section>
   );
 }

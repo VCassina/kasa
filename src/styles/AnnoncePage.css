@@ -2,3 +2,23 @@
     display: flex;
     gap: 95px;
 }
+
+@media (max-width: 1279px) {
+    .annoncePage_collapseManager {
+        gap: 40px;
+        justify-content: space-between;
+      }
+}
+
+@media (max-width: 714px) {
+    .annoncePage_collapseManager {
+        flex-direction: column;
+        gap: 20px;
+      }
+}
+
+@media (max-width: 599px) {
+    .annoncePage_collapseManager {
+        margin-top: 10px;
+    }
+}
