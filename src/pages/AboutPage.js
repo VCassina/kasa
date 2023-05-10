@@ -10,7 +10,7 @@ function AboutPage() {
   return (
     <div>
       <Header />
-      <Banner image={bannerCover} title="" />
+      <Banner image={bannerCover} title=""/>
       <AboutArticleManager />
       <Footer />
     </div>

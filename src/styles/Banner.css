@@ -41,4 +41,9 @@
       font-size: 20px;
       line-height: 40px;
     }
+
+    .resize_img--specialBehave {
+      height: 225px;
+    }
 }
+
