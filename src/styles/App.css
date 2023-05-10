@@ -64,7 +64,16 @@ header,
   margin: 40px auto;         // Ce que j'estime être bon et responsive desktop. */
 }
 
-/*
-Pour décaler quand la scrollbar n'est pas présente !
-margin-right: calc(100vw - 100%);
-*/
+@media (max-width: 1279px) {
+  header,
+  .banner_wrapper,
+  .annonce_wrapper,
+  .AboutArticle_wrapper,
+  .notfound_wrapper,
+  .annoncePage_collapseManager,
+  .annonceUpperArticle_wrapper,
+  .carrousel_wrapper {
+  padding-left: 40px;
+  padding-right: 40px;
+  }
+}

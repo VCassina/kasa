@@ -32,8 +32,34 @@ header ul {
 
 .header_homepage-link.active {
     text-decoration: underline;
-  }
-  
-  .header_about-link.active {
+}
+
+.header_about-link.active {
     text-decoration: underline;
-  }
+}
+
+@media (max-width: 1279px) {
+    header {
+        width: auto;
+    }
+
+    .header_nav {
+        white-space: nowrap;
+    }
+}
+
+@media (max-width: 599px) {
+
+    .header_nav {
+        justify-self: flex-end;
+        
+    }
+
+    .header_ul {
+        flex-direction: column;
+        justify-content: end;
+        position: relative;
+        top: 18px;
+        gap: 10px;
+    }
+}
