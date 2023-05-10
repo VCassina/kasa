@@ -20,7 +20,7 @@ function Annonce() {
           </div>
         ))}
 
-        <Link to="/voir-plus">
+        <Link to="/">
           <div className="annonce_element annonce_element-more plus_icon">
             <FontAwesomeIcon icon={faPlus} />
             <span>Voir plus</span>

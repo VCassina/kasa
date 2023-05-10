@@ -8,6 +8,7 @@ a {
     justify-content: center;
     background: #F7F7F7;
     border-radius: 25px;
+
 }
 
 .annonce_wrapper-content {
@@ -29,7 +30,6 @@ a {
     object-fit: cover;
     border-radius: 10px;
     filter: brightness(75%);
-    max-width: 400px;
 }
 
 .annonce_element h2 {
@@ -49,10 +49,6 @@ a {
     align-items: center;
     background: rgba(0, 0, 0, 0.05);
     border-radius: 25px;
-}
-
-.annonce_element-more {
-    display: flex;
     gap: 10px;
     color: black;
 }
@@ -64,4 +60,51 @@ a {
 .annonce_element:hover span,
 .annonce_element:hover svg {
     opacity: 0.5;
+}
+
+@media (max-width: 1279px) {
+    .annonce_wrapper {
+        display: flex;
+        width: auto;
+        justify-content: center;
+        margin-left: 40px;
+        margin-right: 40px;
+        background: none;
+        margin-left: 0;
+        margin-right: 0;
+        margin-top: 0;
+    }
+
+    .annonce_wrapper-content {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        overflow: scroll;
+    }
+
+    .annonce_wrapper-content a {
+        width: 100%;
+    }
+
+    .annonce_element {
+        width: 100%;
+    }
+
+    .annonce_element-more {
+        height: 145px;
+    }
+}
+
+@media (max-width: 599px) {
+    .annonce_wrapper {
+        width: 100%;
+    }
+
+    .annonce_element {
+        height: 255px;
+    }
+
+    .annonce_element-more {
+        height: 105px;
+    }
 }

@@ -18,12 +18,27 @@
     transform: translate(-50%, -50%);
     color: white;
     text-align: center;
-    width: 100%;
+    width: 85%;
     
 
     font-family: 'Montserrat';
     font-style: normal;
-    font-weight: 100; /* Weight ne fonctionne pas - Voir fonts.css avec Adrien ! */
     font-size: 40px;
     line-height: 68px;
   }
+
+  @media (max-width: 599px) {
+
+    .banner_wrapper {
+      margin: 40px 0 0 0;
+    }
+
+    .banner_img {
+      height: 110px;
+    }
+
+    .banner_text {
+      font-size: 20px;
+      line-height: 40px;
+    }
+}
