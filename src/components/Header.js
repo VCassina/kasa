@@ -6,24 +6,6 @@ import React, { useState, useEffect } from "react";
 
 
 function Header() {
-    // const [isHomePageActive, setHomePageActive] = useState(false);          /* Variables d'états pour savoir qui sera surligné. */
-    // const [isAboutPageActive, setAboutPageActive] = useState(false);        /* Variables d'états pour savoir qui sera surligné. */
-    // const location = useLocation();
-
-    // useEffect(() => {                                               /* Logique fausse, si on a dix configurations, ça explose ! */
-    //     if (location.pathname === "/") {                            /* Il faudrait plutôt un state (objet/tableau). */
-    //       setHomePageActive(true);                                  /* Pas de IF, une constante qui dit : pour le chemin X et Y, on affiche ses routes là. */
-    //       setAboutPageActive(false);                                /* + Une boucle jusqu'à ce qu'elle trouve la bonne confige. */
-    //     } else if (location.pathname === "/about") {            
-    //       setHomePageActive(false);                                 /* En gros, dans une variable, on a nos URL, on parcourt, quand on trouve ce qui match, on change selon ce qui est prévu. */
-    //       setAboutPageActive(true);
-    //     } else {
-    //       setHomePageActive(false);
-    //       setAboutPageActive(false);
-    //     }
-    //   }, [location.pathname]);
-
-
     const [activePages, setActivePages] = useState({}); // Un état pour stocker les pages concernées par le sous-lignage.
     const location = useLocation();
   
