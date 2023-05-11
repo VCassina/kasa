@@ -8,6 +8,9 @@ import Carrousel from "../components/Carrousel";
 import AnnonceUpperArticle from "../components/AnnonceUpperArticle";
 import CollapseArticle from "../components/CollapseArticle";
 import "../styles/AnnoncePage.css";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faFrownOpen } from '@fortawesome/free-solid-svg-icons';
+
 
 function AnnoncePage() {
   const { id } = useParams();
@@ -15,6 +18,7 @@ function AnnoncePage() {
 
   useEffect(() => {
     // Vérifie si l'ID renseigné pour cette annonce est dans la dataBase afin de rediriger OU NON vers la notFoundPage.
+    // Cette vérification sur cette page s'explique par le fait qu'elle utilise un ID pour être généré, donc "n'importe quelle instruction dans l'URL après annonce/ " pourrait être considéré comme un ID si on ne vérifie pas.
     const annonceExist = logements.some((annonce) => annonce.id === id);
     if (!annonceExist) {
       navigate("/not-found");
@@ -26,7 +30,7 @@ function AnnoncePage() {
   return (
     <div className="annoncePage_wrapper">
       <Header />
-      {annonce && ( // On a besoin de connaitre l'état d'annonce pour continuer OU NON la compilation du code.
+      {annonce ? (
         <main>
           <Carrousel pictures={annonce.pictures} />
           <AnnonceUpperArticle
@@ -41,10 +45,22 @@ function AnnoncePage() {
             <CollapseArticle title="Équipements" content={annonce.equipments} />
           </div>
         </main>
+      ) : (
+        <main>
+          <article className="annoncePage_error-content">
+          <FontAwesomeIcon icon={faFrownOpen} className="faFrownOpen" />
+          <div className="annoncePage_error-text">
+            <p>Oh !</p>
+            <p>Il y a un soucis avec la base de données.</p>
+            <p>Pas de chance.</p>
+            </div>
+          </article>
+        </main>
       )}
       <Footer />
     </div>
-  ); 
+  );
+   
 }
 
 export default AnnoncePage;

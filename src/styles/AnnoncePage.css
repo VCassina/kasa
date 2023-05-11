@@ -3,18 +3,40 @@
     gap: 95px;
 }
 
+.annoncePage_error-content {
+    display: flex;
+    flex-direction: column;
+    color: #FF6060;
+    margin-top: 150px;
+    gap: 100px;
+}
+
+.annoncePage_error-text {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 36px;
+}
+
+.faFrownOpen {
+    height: 250px;
+}
+
 @media (max-width: 1279px) {
     .annoncePage_collapseManager {
         gap: 40px;
         justify-content: space-between;
-      }
+    }
 }
 
 @media (max-width: 714px) {
     .annoncePage_collapseManager {
         flex-direction: column;
         gap: 20px;
-      }
+    }
 }
 
 @media (max-width: 599px) {

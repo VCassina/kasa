@@ -17,7 +17,7 @@ function CollapseArticle(props) {
         <h2>{props.title}</h2>
         <FontAwesomeIcon
           icon={faChevronDown}
-          className={`arrow-icon downCase ${showText ? "hidden" : ""}`}
+          className={`arrow-icon downCase ${showText ? "hidden" : ""}`} // Selon l'état de showText (qui s'inverse lors du click), le statut change, la classe est présente ou non.
           onClick={toggleText}
         />
         <FontAwesomeIcon
