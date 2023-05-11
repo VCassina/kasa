@@ -19,6 +19,7 @@ function AnnoncePage() {
   useEffect(() => {
     // Vérifie si l'ID renseigné pour cette annonce est dans la dataBase afin de rediriger OU NON vers la notFoundPage.
     // Cette vérification sur cette page s'explique par le fait qu'elle utilise un ID pour être généré, donc "n'importe quelle instruction dans l'URL après annonce/ " pourrait être considéré comme un ID si on ne vérifie pas.
+    
     const annonceExist = logements.some((annonce) => annonce.id === id);
     if (!annonceExist) {
       navigate("/not-found");
