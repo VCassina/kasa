@@ -2,6 +2,7 @@
   "name": "kasa",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://vcassina.github.io/projet-8",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.4.0",
     "@fortawesome/free-solid-svg-icons": "^6.4.0",
@@ -14,10 +15,11 @@
     "react-image-file-resizer": "^0.4.8",
     "react-router-dom": "^6.11.1",
     "web-vitals": "^2.1.4"
-  },
-  "scripts": {
+  },  "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
@@ -40,6 +42,7 @@
     ]
   },
   "devDependencies": {
+    "gh-pages": "^5.0.0",
     "react-scripts": "^5.0.1"
   }
 }
