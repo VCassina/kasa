@@ -25,7 +25,7 @@ function AnnoncePage() {
     }
   }, [id, navigate]);
 
-  const annonce = logements.find((annonce) => annonce.id === id);
+  const annonce = logements.find((annonce) => annonce.ied === id);
 
   return (
     <div className="annoncePage_wrapper">
