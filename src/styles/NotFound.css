@@ -39,6 +39,12 @@ a {
 }
 
 @media (max-width: 599px) {
+    .notFound_wrapper {
+        margin-top: 180px;
+        margin-bottom: 30px;
+        gap: 120px;
+    }
+
     .notFound_wrapper-content {
         gap: 10px;
     }
