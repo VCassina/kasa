@@ -5,7 +5,7 @@ import AboutPage from "../AboutPage";
 import AnnoncePage from "../AnnoncePage";
 import NotFoundPage from "../NotFoundPage";
 
-function AppRoutes() {
+function AppRoutes() { // :id rend la génération dynamique.
   return (
     <Routes>
       <Route path="/" element={<HomePage />} />
