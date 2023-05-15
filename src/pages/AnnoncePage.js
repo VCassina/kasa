@@ -8,8 +8,7 @@ import Carrousel from "../components/Carrousel";
 import AnnonceUpperArticle from "../components/AnnonceUpperArticle";
 import CollapseArticle from "../components/CollapseArticle";
 import "../styles/AnnoncePage.css";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faFrownOpen } from '@fortawesome/free-solid-svg-icons';
+import ErrorDbArticle from '../components/ErrorDbArticle';
 
 
 function AnnoncePage() {
@@ -48,14 +47,7 @@ function AnnoncePage() {
         </main>
       ) : (
         <main>
-          <article className="annoncePage_error-content">
-          <FontAwesomeIcon icon={faFrownOpen} className="faFrownOpen" />
-          <div className="annoncePage_error-text">
-            <p>Oh !</p>
-            <p>Il y a un soucis avec la base de données.</p>
-            <p>Pas de chance.</p>
-            </div>
-          </article>
+          <ErrorDbArticle />
         </main>
       )}
       <Footer />
