@@ -30,7 +30,7 @@ function AnnoncePage() {
   return (
     <div className="annoncePage_wrapper">
       <Header />
-      {annonce ? (
+      {annonce && annonce.title && annonce.location && annonce.tags && annonce.host && annonce.rating ? (  // Si les chants dont je vais avoir besoin sont existants et remplis !
         <main>
           <Carrousel pictures={annonce.pictures} />
           <AnnonceUpperArticle
@@ -53,7 +53,6 @@ function AnnoncePage() {
       <Footer />
     </div>
   );
-   
 }
 
 export default AnnoncePage;
