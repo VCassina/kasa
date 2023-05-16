@@ -207,3 +207,9 @@
         height: 16px;
     }
 }
+
+@media (max-width: 714px) {
+    .errorProfilPictureTxt {
+        display: none;
+    }
+}

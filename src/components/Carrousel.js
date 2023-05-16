@@ -20,14 +20,20 @@ function Carrousel(props) {
     
   return (
     <section className="carrousel_wrapper">
-      <div className="carrousel-content">
-      <FontAwesomeIcon icon={faChevronLeft} onClick={handlePrevious} />
-        <img src={props.pictures[currentIndex]} alt="Intérieur de l'appartement" />
-        <FontAwesomeIcon icon={faChevronRight} onClick={handleNext} />
-      </div>
-      <p className="carrousel-count">
-        {`${currentIndex + 1} / ${props.pictures.length}`}
-      </p>
+      {props.pictures.length === 0 ? (
+        <p className="errorImageTxt">- image manquante -</p>
+      ) : (
+        <div className="carrousel-content">
+          <FontAwesomeIcon icon={faChevronLeft} onClick={handlePrevious} />
+          <img src={props.pictures[currentIndex]} alt="Intérieur de l'appartement" />
+          <FontAwesomeIcon icon={faChevronRight} onClick={handleNext} />
+        </div>
+      )}
+      {props.pictures.length !== 0 && (
+        <p className="carrousel-count">
+          {`${currentIndex + 1} / ${props.pictures.length}`}
+        </p>
+      )}
     </section>
   );
 }

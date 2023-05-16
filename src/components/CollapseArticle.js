@@ -26,22 +26,22 @@ function CollapseArticle(props) {
           onClick={toggleText}
         />
       </div>
-      <div
-        className={`collapseArticle_element-texte ${showText ? "" : "hidden"}`}
-      >
-        {Array.isArray(props.content) ? ( // S'il s'agit d'un tableaud d'objet et non pas d'un simple texte...
-          <div>
-            {props.content.map((item, index) => (
-              <span key={index}>
-                {item}
-                <br />
-              </span>
-            ))}
-          </div>
-        ) : ( // Et sinon, fais comme d'habitude.
-          <p>{props.content}</p>
-        )}
-      </div>
+      <div className={`collapseArticle_element-texte ${showText ? "" : "hidden"}`}>
+      {Array.isArray(props.content) && props.content.length > 0 ? (
+        <div>
+          {props.content.map((item, index) => (
+            <span key={index}>
+              {item}
+              <br />
+            </span>
+          ))}
+        </div>
+      ) : props.content ? (
+        <p>{props.content}</p>
+      ) : (
+        <p>- Texte manquant -</p>
+      )}
+    </div>
     </article>
   );
 }

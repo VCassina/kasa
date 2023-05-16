@@ -32,8 +32,8 @@ function AnnonceUpperArticle(props) {
     <article className="annonceUpperArticle_wrapper">
       <div className="annonceUpperArticle_leftContent">
         <div className="annonceUpperArticle_leftContent-titleSection">
-          <h2>{title}</h2>
-          <p>{location}</p>
+          <h2>{title || "- Titre manquant -"}</h2>
+          <p>{location || "- Localisation manquante -"}</p>
         </div>
 
         <div className="annonceUpperArticle_leftContent-keyWords">
@@ -45,13 +45,13 @@ function AnnonceUpperArticle(props) {
       <div className="annonceUpperArticle_rightContent">
         <div className="annonceUpperArticle_rightContent-mainContent">
           <div className="annonceUpperArticle_rightContent-mainContent-label">
-            <span>{host.name.split(" ")[0]}</span> {}
-            <span>{host.name.split(" ")[1]}</span> {}
+            <span>{host.name.split(" ")[0] || "- Prénom manquant -"}</span> {}
+            <span>{host.name.split(" ")[1] || "- Nom manquant -"}</span> {}
           </div>
-          <img src={host.picture} alt="Profil de l'hôte" />
+          {host.picture ? <img src={host.picture} alt="Profil de l'hôte" /> : <p className="errorProfilPictureTxt">- Photo manquante -</p>}   
         </div>
         <div className="annonceUpperArticle_rightContent-stars">
-          {renderStars()}
+          {rating ? renderStars() : "- Etoiles manquantes -"}
         </div>
       </div>
     </article>

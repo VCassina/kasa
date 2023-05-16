@@ -57,6 +57,12 @@
     font-size: 20px;
 }
 
+.errorImageTxt {
+    color: red !important;
+    position: relative;
+    top: 200px;
+}
+
 @media (max-width: 1279px) {
     .carrousel_wrapper {
         position: relative;
@@ -82,7 +88,12 @@
         height: 20px;
     }
 
-    .carrousel_wrapper p {
+    .carrousel-count {
         display: none;
+    }
+
+    .errorImageTxt {
+        top: 125px;
+        white-space: nowrap;
     }
 }

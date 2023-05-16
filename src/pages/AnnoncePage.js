@@ -8,8 +8,6 @@ import Carrousel from "../components/Carrousel";
 import AnnonceUpperArticle from "../components/AnnonceUpperArticle";
 import CollapseArticle from "../components/CollapseArticle";
 import "../styles/AnnoncePage.css";
-import ErrorDbArticle from '../components/ErrorDbArticle';
-
 
 function AnnoncePage() {
   const { id } = useParams();
@@ -30,26 +28,15 @@ function AnnoncePage() {
   return (
     <div className="annoncePage_wrapper">
       <Header />
-      {annonce && annonce.title && annonce.location && annonce.tags && annonce.host && annonce.rating ? (  // Si les chants dont je vais avoir besoin sont existants et remplis !
         <main>
           <Carrousel pictures={annonce.pictures} />
-          <AnnonceUpperArticle
-            title={annonce.title}
-            location={annonce.location}
-            tags={annonce.tags}
-            host={annonce.host}
-            rating={annonce.rating}
+          <AnnonceUpperArticle {...annonce}
           />
           <div className="annoncePage_collapseManager">
             <CollapseArticle title="Description" content={annonce.description} />
             <CollapseArticle title="Équipements" content={annonce.equipments} />
           </div>
         </main>
-      ) : (
-        <main>
-          <ErrorDbArticle />
-        </main>
-      )}
       <Footer />
     </div>
   );
