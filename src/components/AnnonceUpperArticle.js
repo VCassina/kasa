@@ -7,11 +7,11 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 library.add(faStar);
 
 function AnnonceUpperArticle(props) {
-  const { title, location, tags, host, rating } = props; // Destructuration des props
+  const { title, location, tags, host, rating } = props;
 
   const renderStars = () => {
-    const fullStars = Math.floor(rating); // Nombre d'étoiles pleines
-    const remainingStars = 5 - fullStars; // Nombre d'étoiles restantes
+    const fullStars = Math.floor(rating);
+    const emptyStars = 5 - fullStars;
 
     const stars = [];
 
@@ -19,7 +19,7 @@ function AnnonceUpperArticle(props) {
       stars.push(<FontAwesomeIcon key={i} icon="star" className="full" />);
     }
 
-    for (let i = 0; i < remainingStars; i++) {
+    for (let i = 0; i < emptyStars; i++) {
       stars.push(
         <FontAwesomeIcon key={fullStars + i} icon="star" className="empty" />
       );
