@@ -13,9 +13,13 @@ function Annonce() {
       <article className="annonce_wrapper-content">
         {annonces.map((annonce) => (
           <div key={annonce.id} className="annonce_element">
-            <Link to={`/annonce/${annonce.id}`}>
+            <Link to={`/annonce/${annonce.id}`} className="linkCover">
+            {annonce.cover ? (
               <img src={annonce.cover} alt={annonce.title} />
-              <h2>{annonce.title}</h2>
+            ) : (
+              <p className="errorCoverTxt">- Cover manquante -</p>
+            )}
+              <h2>{annonce.title || "- Titre manquant -"}</h2>
             </Link>
           </div>
         ))}

@@ -3,7 +3,6 @@ a {
 }
 
 .annonce_wrapper {
-    display: flex;
     width: 100%;
     justify-content: center;
     background: #F7F7F7;
@@ -19,6 +18,7 @@ a {
 }
 
 .annonce_element {
+    display: flex;
     position: relative;
     width: 340px;
     height: 340px;
@@ -60,6 +60,13 @@ a {
 .annonce_element:hover span,
 .annonce_element:hover svg {
     opacity: 0.5;
+}
+
+.linkCover {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
 }
 
 @media (max-width: 1279px) {

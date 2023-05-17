@@ -45,6 +45,7 @@ function AnnonceUpperArticle(props) {
       <div className="annonceUpperArticle_rightContent">
         <div className="annonceUpperArticle_rightContent-mainContent">
           <div className="annonceUpperArticle_rightContent-mainContent-label">
+        
             <span>{host.name.split(" ")[0] || "- Prénom manquant -"}</span> {}
             <span>{host.name.split(" ")[1] || "- Nom manquant -"}</span> {}
           </div>
