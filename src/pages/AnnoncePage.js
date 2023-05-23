@@ -2,8 +2,6 @@
 import React, { useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import logements from "../datas/logements.json";
-import Header from "../components/Header";
-import Footer from "../components/Footer";
 import Carrousel from "../components/Carrousel";
 import AnnonceUpperArticle from "../components/AnnonceUpperArticle";
 import CollapseArticle from "../components/CollapseArticle";
@@ -29,7 +27,6 @@ function AnnoncePage() {
 
   return (
     <div className="annoncePage_wrapper">
-      <Header />
         <main>
           <Carrousel pictures={annonce.pictures} />
           <AnnonceUpperArticle {...annonce}
@@ -39,7 +36,6 @@ function AnnoncePage() {
             <CollapseArticle title="Équipements" content={annonce.equipments} />
           </div>
         </main>
-      <Footer />
     </div>
   );
 }
