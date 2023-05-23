@@ -6,7 +6,6 @@ import "../styles/fonts.css";
 
 function CollapseArticle(props) {
   const [showText, setShowText] = useState(false);
-
   const toggleText = () => {
     setShowText(!showText);
   };
@@ -27,9 +26,11 @@ function CollapseArticle(props) {
         />
       </div>
       <div
-        className={`collapseArticle_element-texte ${showText ? "" : "hidden"}`}
-      >
-        {Array.isArray(props.content) && props.content.length > 0 && props.content[0] !== "" ? ( // Est-ce un tableau NON vide ?
+        className={`collapseArticle_element-texte ${!showText ? "hidden" : null}`}>
+
+        {Array.isArray(props.content) && props.content.length > 0 && props.content[0] !== "" ? ( 
+        // Pour soncontenu : 
+        // Est-ce un tableau et est-ce un tableau NON vide (pour que les listes (comme équipements - annoncePage) s'affichent bien) ?
           <div>
             {props.content.map(
               (
@@ -43,10 +44,10 @@ function CollapseArticle(props) {
               )
             )}
           </div>
-        ) : Array.isArray(props.content) &&
+        ) : Array.isArray(props.content) && // Si c'est un tableau mais vide -> Message d'erreur.
           (props.content.length === 0 || props.content[0] === "") ? (
-          <p>- Texte manquant -</p>
-        ) : props.content && !Array.isArray(props.content) ? (
+          <p>- Equipement manquant -</p>
+        ) : props.content && !Array.isArray(props.content) ? ( // Si ce n'est pas un tableau, on affiche simplement le contenu ou alors on marque "Texte manquant".
           <p>{props.content}</p>
         ) : (
           <p>- Texte manquant -</p>

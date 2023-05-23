@@ -3,25 +3,21 @@ import "../styles/AnnonceUpperArticle.css";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-
 library.add(faStar);
 
 function AnnonceUpperArticle(props) {
   const { title, location, tags, host, rating } = props;
 
   const renderStars = () => {
-    const fullStars = Math.floor(rating);
+    const fullStars = rating;
     const emptyStars = 5 - fullStars;
-
     const stars = [];
 
     for (let i = 0; i < fullStars; i++) {
-      stars.push(<FontAwesomeIcon key={i} icon="star" className="full" />);
+      stars.push(<FontAwesomeIcon icon="star" className="full" />);
     }
-
     for (let i = 0; i < emptyStars; i++) {
-      stars.push(
-        <FontAwesomeIcon key={fullStars + i} icon="star" className="empty" />
+      stars.push(<FontAwesomeIcon icon="star" className="empty" />
       );
     }
 

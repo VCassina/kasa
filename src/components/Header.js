@@ -6,28 +6,33 @@ import React, { useState, useEffect } from "react";
 
 
 function Header() {
-    const [activePages, setActivePages] = useState({}); // Un état pour stocker les pages concernées par le sous-lignage.
-    const location = useLocation();
+    const [activePage, setactivePage] = useState({}); // On va y stocker nos pages qui doivent être surlignées, on déclare activesPages comme étant vide.
+    const location = useLocation(); // Notre URL actuelle.
   
-    useEffect(() => {
-      const urls = ["/", "/about"]; // Tableau des URL à vérifier.
-      const activePagesConfig = {}; // Configuration des pages "actives" qui déclanchent le surlignage, mis dynamiquement à jour par la boucle qui suit :
-      urls.forEach(url => {         // Pour toutes nos URLs :
-        activePagesConfig[url] = location.pathname === url; // Vérifie si l'URL correspond à la page actuelle.
+    useEffect(() => { // Lors qu'on change d'URL (localtion.pathename), on vient réappliquer l'effet.
+      const urls = ["/", "/about"]; // Toutes les URL où l'on souhaite appliquer un surlignage.
+      const activePageConfig = {};  // Contiendra un état true // false de si la page doit être surlignée.
+      urls.forEach(url => {         // Test pour / et /about si l'URL en cours (location.pathname) est égal à l'URL de la boucle (/ ou /about) :
+        // - Si c'est le cas, activePageConfig est sur true, sinon false. ActivePageConfig contient donc la page qui doit être surlignée en ce moment précis dans le header.
+        activePageConfig[url] = location.pathname === url;  
       });
   
-      setActivePages(activePagesConfig); // Met à jour l'état des pages concernées par le sous-lignage.
-    }, [location.pathname]);  // Et ce uniquement lors qu'un changement d'URL est détecté.
+      setactivePage(activePageConfig); // On défini le contenu de notre variable d'état activePage à travers setactivePage qui introduit le contenu du tableau activePageConfig.
+      // On introduit donc comme contenu l'URL "vainqueur" en tant qu'activePage
+    }, [location.pathname]); 
+
+    /* Au onClick, on testera ensuite via un conditionnement ternaire si activePage contient l'URL associé à notre élément dans le JSX :
+    - Si oui, la classe active est ajoutée et ajoutera un surlignage, sinon rien de particulier. */
 
   return (
     <header>
       <img src={kasalogo} alt="Logo Kasa" className="header_logo"/>
       <nav className="header_nav">
       <ul className="header_ul">
-          <li className={activePages["/"] ? "header_homepage-link active" : "header_homepage-link"} /* "Si nous sommes sur l'élément stocké dans activePages correspondant à "/", alors ... */> 
+          <li className={activePage["/"] ? "header_homepage-link active" : "header_homepage-link"}>
             <Link to="/">Accueil</Link>
           </li>
-          <li className={activePages["/about"] ? "header_about-link active" : "header_about-link"} /* "Si nous sommes sur l'élément stocké dans activePages correspondant à "/", alors ... */>
+          <li className={activePage["/about"] ? "header_about-link active" : "header_about-link"}>
             <Link to="/about">A Propos</Link>
           </li>
         </ul>

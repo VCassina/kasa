@@ -29,11 +29,11 @@ function Carrousel(props) {
           <FontAwesomeIcon icon={faChevronRight} onClick={handleNext} />
         </div>
       )}
-      {props.pictures.length !== 0 && ( // Si tableau non vide.
+      {props.pictures.length !== 0  || props.pictures[0] !== "" ? ( // Si tableau non vide, même conditionnement.
         <p className="carrousel-count">
           {`${currentIndex + 1} / ${props.pictures.length}`}
         </p>
-      )}
+      ) : null}
     </section>
   );  
 }
